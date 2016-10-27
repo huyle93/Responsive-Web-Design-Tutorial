@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://itcourses.cs.unh.edu/assets/docs/502/design_template.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths gr__itcourses_cs_unh_edu" style="">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <title>IT502 - Intermediate Web Design - Design Template</title>
+
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./index_files/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./index_files/styles.css" rel="stylesheet">
+
+    <!-- Include Modernizr in the head, before any other Javascript -->
+    <script src="./index_files/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+    <div class="container">
+
+        <header class="jumbotron">
+            <p class="unh_dept"><span class="visible-print-inline">University of New Hampshire, </span>Department of Computer Science</p>
+            <p class="course_info">Information Technology 502
+                <br class="hidden-print"><span class="visible-print-inline">, </span> Intermediate Web Design</p>
+            <p class="semester">Spring 2016</p>
+            <p class="sr-only"><a href="http://itcourses.cs.unh.edu/assets/docs/502/design_template.html#nav">Jump to navigation</a></p>
+        </header>
+
+        <main class="row">
+            <h1>Design Template <span class="small"> by Anonymous</span></h1>
+
+            <!-- START -->
+            <!-- Start writing your page content here - Do not add or change any code above this line -->
+
+            <!-- Put your title for this page below, but DO NOT ENTER YOUR TUTORIAL TITLE OR YOUR OWN NAME YET! -->
+            <h2>IT502 - Individual Project</h2>
+
+
+            <h3>The Approach</h3>
+            <p>As a web developer, responsive design is designing your website so that it responds to your users' environment making it bulletproof in all condition of screen sizes. Responsive design is not a design for mobile or tablet, it is a design for &lsquo;____&rsquo; (blank, which means the page has to fit in any type of environment).</p>
+            <h4>CSS Relative Units</h4>
+            <p>CSS Relative Units is one of the key tips for responsive design to allow the flexibility in sizing text, image or length and width of an element in general.</p>
+            <h5>Absolute vs. Relative lengths</h5>
+            <p>Absolute lenghts is the absolute length units are fixed and a length expressed in any of these will appear as exactly that size. Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout. Example: , cm, mm, pt</p>
+            <p>Relative lengths is Relative length units specify a length relative to another length property. Relative length units scales better between different rendering mediums. Example: em, ex, ch, rem</p>
+            <h4>Responsive Image</h4>
+            <p>Responsive image is one of the most important part of responsive web design. Image in responsive website needs to be in relative units. Having the sizes in the relative units would prevent the image from placing outide their containing element.</p>
+            <figure>
+                <img src="img-04.jpg" class="img-responsive" alt="responsive image" height="300" width="500">
+                <figcaption>Fig.04 - The image/jumbotron is fully responsive in different screens</figcaption>
+            </figure>
+            <h5>Common Approach</h5>
+            <p>The common approach for reposive image is using the width or max-width property</p>
+            <code>img { width: 100%; height: auto;}</code>
+            <p>or</p>
+            <code>img { max-width: 100%; height: auto;}</code>
+            <h4>The Viewport</h4>
+            <p>Viewport is the user&apos;s visible area of a web page. The viewport is scalable, it will be smaller on a mobile phone than on a computer screen. When the web was designed only for computer screens, and it was common for web pages to have a static design and a fixed size. Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen. This was not perfect, but a quick fix.</p>
+            <figure>
+                <img src="img-05.jpg" class="img-responsive" alt="meta viewport code w3school" height="300" width="500">
+                <figcaption>Fig.05 - The image/jumbotron is fully responsive in different screens</figcaption>
+            </figure>
+            <h4>CSS Media Queries</h4>
+            <p>A media query allows us to target not only certain device classes, but to actually inspect the physical characteristics of the device rendering our work. The @media rules are used to define different style rules for different media types/devices. Media queries allow you to set the CSS to react differently at different pixel width of the screen.</p>
+            <code>@media (query) { /* CSS Rules used when query matches */}</code>
+            <p>The query contains two components</p>
+            <ol>
+                <li>A media type (screen)</li>
+                <li>the actual query enclosed within parentheses, containing a particular media feature (max-device-width) to inspect, followed by the target value (480px)</li>
+            </ol>
+            <p><b>Example Code</b></p>
+            <code>@media screen and (max-device-width: 480px) {.column {float: none;} }</code>
+            <p><b>Example of Using CSS Media Query</b></p>
+            <figure>
+                <img src="img-06.jpg" class="img-responsive" alt="media query example" height="300" width="500">
+                <figcaption>Fig.06 - The 3 devices have responsive content rendering using CSS media query</figcaption>
+            </figure>
+            <h3>Responsive Framework</h3>
+            <p>Since the day that Responsive Web Design becomes the main stream and requirement for most modern website, there are different of responsive web design patterns and frameworks were created.</p>
+            <h4>Responsive Web Design Patterns</h4>
+            <p>Most layouts used by responsive web pages can be categorized into one of five patterns: mostly fluid, column drop, layout shifter, tiny tweaks, and off canvas. In some cases, a page may use a combination of patterns, for example column drop and off canvas.</p>
+            <p><b>Example</b></p>
+            <p>Mostly Fluid: The mostly fluid pattern consists primarily of a fluid grid. On large or medium screens, it usually remains the same size, simply adjusting the margins on wider screens. On smaller screens, the fluid grid causes the main content to reflow, while columns are stacked vertically. One major advantage of this pattern is that it usually only requires one breakpoint between small screens and large screens.</p>
+            <figure>
+                <img src="img-07.jpg" class="img-responsive" alt="RWD Pattern" height="300" width="500">
+                <figcaption>Fig.07 - The Mostly Fluid RWD Pattern by Google Developers</figcaption>
+            </figure>
+            <p>In the smallest view, each content div is stacked vertically. When the screen width hits 600px, the primary content div remains at width: 100%, while the secondary div's are shown as two columns below the primary div. Beyond 800px, the container div becomes fixed width and is centered on the screen.</p>
+            <h4>Responsive Web Design Frameworks</h4>
+            <p>Similar to Patterns, there are different frameworks that you can find online such as Bootstrap, Foundation, Skeleton, etc. All of them share a similar thing, the <b>grid system</b>.</p>
+            <h5>Grid System</h5>
+            <p>The most popular responsive website framework - Bootstrap uses the 12 Divided Columns, Grid System</p>
+            <p>Using a grid-view is very helpful when designing web pages. It makes it easier to place elements on the page. A responsive grid-view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.</p>
+            <a href="http://www.w3schools.com/css/tryresponsive_grid.htm">Testing Grid System</a>
+            <figure>
+                <img src="img-08.jpg" class="img-responsive" alt="12 Col Grid System" height="300" width="500">
+                <figcaption>Fig.08 - Bootstrap 12 Columns Grid System</figcaption>
+            </figure>
+            <h4>Bootstrap</h4>
+            <p>Bootstrap is the most popular framework for web development. It is a free front-end responsive framework for faster and easier web development and mobile first. It is Easy to use, responsive with all screens, mobile-first approach and browser compatibility which was released in 2011</p>
+            <figure>
+                <img src="img-09.jpg" class="img-responsive" alt="Bootstrap" height="300" width="500">
+                <figcaption>Fig.09 - Bootstrap Framework</figcaption>
+            </figure>
+            <!-- Pagination system - customize on each page to suit your tutorial -->
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="/index.html">
+                            <span aria-hidden="true">�</span>
+                        </a>
+                    </li>
+                    <li><a href="/index.html">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="/sources.html">Sources</a></li>
+                    <li>
+                        <a href="/sources.html" aria-label="Next">
+                            <span aria-hidden="true">�</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Stop writing your page content here - Do not add or change any code below this line -->
+            <!-- END -->
+        </main>
+
+        <footer class="jumbotron">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h6 class="hidden-print">Instructor</h6>
+                    <div>Mike Gildersleeve, <a href="mailto:amgilder@cs.unh.edu">amgilder@cs.unh.edu</a>
+                        <br> W247 Kingsbury, (603) 862-2506
+                        <br> Office hours:
+                        <br> Monday and Wednesday: 10:30 AM to 11:30 AM </div>
+                    <div style="padding-top: 1em">� Copyright 2016, Mike Gildersleeve</div>
+                    <div style="padding-top: 1em">Last modified: Mon, January 12, 2015 4:01 PM</div>
+                </div>
+                <!-- end col-sm-6 -->
+
+                <div class="col-sm-3 hidden-print">
+                    <h6>Navigation</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="http://itcourses.cs.unh.edu/502/news">News</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/syllabus">Syllabus</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/schedule">Schedule</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/coursework">Coursework</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/tutorials">Tutorials</a></li>
+                    </ul>
+                </div>
+                <!-- end col-sm-3 -->
+
+                <div class="col-sm-3 hidden-print">
+                    <h6>Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="http://itcourses.cs.unh.edu/502/code_of_conduct">Code of Conduct</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/links">Links</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/lessons">Lessons Learned</a></li>
+                    </ul>
+                </div>
+                <!-- end col-sm-3 -->
+
+            </div>
+            <!-- end row-->
+        </footer>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://itcourses.cs.unh.edu/assets/docs/502/">IT502</a>
+                </div>
+                <!-- end navbar-header -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="http://itcourses.cs.unh.edu/502/news">News</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/syllabus">Syllabus</a></li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/schedule">Schedule</a></li>
+                        <li class="dropdown">
+                            <a href="http://itcourses.cs.unh.edu/assets/docs/502/design_template.html#" class="dropdown-toggle" data-toggle="dropdown">Coursework <b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="Coursework">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://itcourses.cs.unh.edu/502/individual_project">Individual Project</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://itcourses.cs.unh.edu/502/team_project">Team Project</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://itcourses.cs.unh.edu/502/tests">Tests</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="http://itcourses.cs.unh.edu/502/tutorials">Tutorials</a></li>
+                        <li class="dropdown">
+                            <a href="http://itcourses.cs.unh.edu/assets/docs/502/design_template.html#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="Resources">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://itcourses.cs.unh.edu/502/code_of_conduct">Code of Conduct</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://itcourses.cs.unh.edu/502/links">Links</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://itcourses.cs.unh.edu/502/lessons">Lessons Learned</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- end navbar-nav -->
+
+                </div>
+                <!-- end navbar-collapse -->
+            </div>
+            <!-- end container -->
+        </nav>
+
+        <!-- All Javascript at the bottom of the page for faster page loading -->
+
+        <!-- First try for the online version of jQuery-->
+        <script src="./index_files/jquery-1.8.2.min.js"></script>
+
+        <!-- If no online access, fallback to our hardcoded version of jQuery -->
+        <script>
+            window.jQuery || document.write('<script src="http://itcourses.cs.unh.edu/assets//js/jquery-1.8.2.min.js"><\/script>')
+        </script>
+
+        <!-- Bootstrap JS -->
+        <script src="./index_files/bootstrap.min.js"></script>
+
+        <!-- Custom JS
+    	<script src="http://itcourses.cs.unh.edu/assets/js/script.js"></script>
+        -->
+    </div>
+
+
+
+</body>
+
+</html>
