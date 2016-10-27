@@ -1,0 +1,255 @@
+/*
+
+My Custom CSS
+=============
+
+*/
+
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+body {
+    margin-top: 60px; /* Account for fixed-top nav bar */
+}
+
+.visible-print-inline {
+    display: none;
+}
+
+figure.center {
+    text-align: center;
+    padding: 10px;
+}
+
+table#schedule {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50em;
+}
+
+table#schedule tr.exam {
+    background-color: #002f87;
+    color: #ffffff;
+    font-size: 125%;
+}
+
+table#schedule tr.lecture {
+    background-color: #c7ddfd;
+    border-top: #002f87 2px solid;
+    font-size: 125%;
+}
+
+table#schedule tr.notice {
+    background-color: #5578b8;
+    color: #ffffff;
+    font-size: 125%;
+}
+
+table#schedule .label {
+    width: 6em;
+}
+
+.lecture > th {
+    width: 8em;
+}
+
+figcaption {          /* For publishish tutorial, primarily */
+    color: #777777;
+}
+
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+a.def {    /* Defined word links */
+    border-bottom: #0C0 double thin;
+}
+
+div#datablock {               /* Generic emphasized data block */
+  margin: 0 0 0.8em 0;
+}
+
+div#datablock p {             /* Generic emphasized data block */
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+header {
+    letter-spacing: 0.10em;
+}
+
+/* --------------------------------------
+   Navbar
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Header
+   -------------------------------------- */
+
+header.jumbotron {
+    background: url('../images/unhlogo.png') #002f87 no-repeat 20px 20px;
+    color: #fff;
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    height: auto;
+    /* font-family: "Goudy Old Style", "Times New Roman", Times, serif; */
+}
+
+header.jumbotron p {
+    margin: 0;
+    margin-left: 40px;
+}
+
+/* --------------------------------------
+   Main
+   -------------------------------------- */
+
+main {
+    padding: 20px;
+}
+
+main a:link {
+    color: #3967bd;
+}
+
+main a:visited {
+    color: #428BCA;
+}
+
+main a:hover {
+    color: #002f87;
+}
+
+main a:active {
+    color: #f00;
+}
+
+/* --------------------------------------
+   Footer
+   -------------------------------------- */
+
+footer.jumbotron {
+	background: #002f87;
+	color: #eee;
+	font-size: 11px;
+	padding: 20px;
+}
+
+footer.jumbotron a:link {
+    color: #9bccf6;
+}
+
+footer.jumbotron a:visited {
+    color: #66aae6;
+}
+
+footer.jumbotron a:hover {
+    color: #fff;
+}
+
+footer.jumbotron a:active {
+    color: #fff;
+}
+
+/* --------------------------------------
+   CS408 Booklist Styles
+   -------------------------------------- */
+.book_title {
+    font-style: italic;
+}
+.book_author {
+    font-weight: bold;
+}
+.book_comments {
+    font-size: .9em;
+}
+.intra_links {
+    font-size: .8em;
+}
+
+
+
+/* --------------------------------------
+   Global Styles
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 530px) {
+    header.jumbotron {
+        background: url('../images/unhlogo-sm.png') #002f87 no-repeat 15px 15px;
+        padding: 45px 10px 10px 16px;
+	    font-size: 1em;
+	}
+}
+
+/* Small tablet
+@media (min-width: 481px) and (max-width: 600px) {
+    header.jumbotron {
+        padding-left: 60px;
+    }
+}
+ */
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 531px) and (max-width: 768px) {
+    header.jumbotron {
+        padding-left: 60px;
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Printer adjustments */
+@media only print {
+
+    header.jumbotron, header.jumbotron p {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        /* font-size: 1em; */
+    }
+
+    header.jumbotron p.unh_dept {
+        font-size: 10pt;
+    }
+
+    header.jumbotron p.course_info {
+        font-size: 14pt;
+    }
+
+    header.jumbotron p.semester {
+        font-size: 10pt;
+    }
+
+    header.jumbotron span.visible-print-inline {
+        display: inline;
+    }
+
+    footer.jumbotron {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        padding-left: 15px;
+    }
+
+    a[href]:after {
+        content: "";
+    }
+}
